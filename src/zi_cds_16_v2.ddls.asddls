@@ -16,6 +16,6 @@ define view entity zi_cds_16_v2
       total_price   as Price,
       currency_code as Currency,
       //      _Currency[ Language = $session.system_language ].CurrencyName
-     // Esta forma sobrescrime la cardinalidad del CDS
+     // Esta forma sobrescrime la cardinalidad del CDS, pero solo afecta a ese campo, no a toda la vista.
       _Currency[1: Language = $session.system_language ].CurrencyName
 }
